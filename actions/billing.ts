@@ -23,6 +23,8 @@ export async function registerPaymentAction(data: {
     })
 
     revalidatePath('/agent_chine/billing')
+    revalidatePath('/agent_burkina/billing')
+    revalidatePath('/client/billing')
     revalidatePath('/client/shipments')
     return { success: true }
   } catch (error: any) {

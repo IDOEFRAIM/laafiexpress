@@ -2,8 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation'; // Import pour la navigation
-import { Scale, Building2, Globe, HardDrive, Mail, Phone, ArrowLeft } from "lucide-react";
+import { useRouter } from 'next/navigation';
+import { 
+  Scale, Building2, Globe, HardDrive, Mail, 
+  Phone, ArrowLeft, ShieldCheck, EyeOff, UserX, Lock 
+} from "lucide-react";
 
 const MentionsLegales = () => {
   const router = useRouter();
@@ -32,7 +35,7 @@ const MentionsLegales = () => {
             animate={{ opacity: 1, y: 0 }}
             className="flex items-center gap-3 text-blue-600 font-bold uppercase tracking-[0.3em] text-xs mb-4"
           >
-            <Scale className="w-4 h-4" /> Cadre Juridique
+            <Scale className="w-4 h-4" /> Cadre Juridique & Confidentialité
           </motion.div>
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-none mb-8">
             Mentions <br />
@@ -44,7 +47,7 @@ const MentionsLegales = () => {
         {/* Grille d'informations */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-slate-100 pt-16">
           
-          {/* Identité de l'entreprise */}
+          {/* 1. Identité de l'entreprise */}
           <section className="space-y-6">
             <div className="flex items-center gap-4">
               <div className="p-3 bg-slate-50 rounded-2xl">
@@ -53,16 +56,15 @@ const MentionsLegales = () => {
               <h2 className="text-xl font-black uppercase tracking-tight">Éditeur du site</h2>
             </div>
             <div className="space-y-3 text-slate-600 leading-relaxed pl-2 border-l-2 border-slate-50">
-              <p className="font-bold text-slate-900">[NOM DE L'ENTREPRISE]</p>
-              <p>Forme sociale : SAS au capital de [Montant]€</p>
-              <p>Siège social : [Adresse complète]</p>
-              <p>RCS : [Numéro] - [Ville]</p>
-              <p>TVA : [Numéro de TVA]</p>
-              <p className="text-blue-600 font-bold">Licence Transport : [N° de licence]</p>
+              <p className="font-bold text-slate-900 text-lg">LAAFI CARGO INTERNATIONAL</p>
+              <p>Siège social : Ouagadougou, Quartier Samendin</p>
+              <p>Localisation : En face de la Pharmacie WATI</p>
+              <p>Pays : Burkina Faso</p>
+              <p className="text-blue-600 font-bold italic text-sm">Expert en logistique Chine - Burkina Faso</p>
             </div>
           </section>
 
-          {/* Contact & Responsabilité */}
+          {/* 2. Contact Officiel */}
           <section className="space-y-6">
             <div className="flex items-center gap-4">
               <div className="p-3 bg-slate-50 rounded-2xl">
@@ -73,46 +75,76 @@ const MentionsLegales = () => {
             <div className="space-y-4 pl-2 border-l-2 border-slate-50">
               <div className="flex items-center gap-3 text-slate-600">
                 <Phone className="w-4 h-4 text-blue-600" />
-                <span>+225 [Numéro]</span>
+                <span>+226 66 66 36 51 (WhatsApp)</span>
+              </div>
+              <div className="flex items-center gap-3 text-slate-600">
+                <Phone className="w-4 h-4 text-blue-600" />
+                <span>+226 56 77 78 19</span>
               </div>
               <div className="flex items-center gap-3 text-slate-600">
                 <Mail className="w-4 h-4 text-blue-600" />
-                <span>contact@votre-domaine.com</span>
+                <span>laaficargointernational@gmail.com</span>
               </div>
-              <p className="text-slate-600">Directeur de publication : [Nom]</p>
             </div>
           </section>
 
-          {/* Hébergement */}
+          {/* 3. Protection des données (Ta politique spécifique) */}
+          <section className="space-y-6">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-slate-50 rounded-2xl">
+                <ShieldCheck className="w-6 h-6 text-slate-600" />
+              </div>
+              <h2 className="text-xl font-black uppercase tracking-tight">Confidentialité</h2>
+            </div>
+            <div className="space-y-3 text-slate-600 leading-relaxed pl-2 border-l-2 border-slate-50">
+              <p><span className="font-bold text-slate-800">Collecte :</span> Consentement par accord verbal (Nom, Prénom, Téléphone, CNIB).</p>
+              <p><span className="font-bold text-slate-800">Conservation :</span> Les données sont conservées indéfiniment pour le suivi historique des expéditions.</p>
+              <p><span className="font-bold text-slate-800">Partage :</span> Aucune donnée n'est partagée avec des tiers (partenaires, douanes ou services de paiement).</p>
+              <p><span className="font-bold text-slate-800">Sécurité :</span> Cryptage des données et accès strictement restreint au <span className="underline italic">Responsable Numérique</span>.</p>
+            </div>
+          </section>
+
+          {/* 4. Tracking & Cookies */}
           <section className="space-y-6">
             <div className="flex items-center gap-4">
               <div className="p-3 bg-slate-50 rounded-2xl">
                 <HardDrive className="w-6 h-6 text-slate-600" />
               </div>
-              <h2 className="text-xl font-black uppercase tracking-tight">Hébergement</h2>
+              <h2 className="text-xl font-black uppercase tracking-tight">Cookies & Outils</h2>
             </div>
-            <div className="pl-2 border-l-2 border-slate-50">
-              <p className="text-slate-600 leading-relaxed">
-                Site hébergé par <span className="font-bold text-slate-900">[Nom Hébergeur]</span>.<br />
-                [Adresse de l'hébergeur]<br />
-                Support : [Lien web]
-              </p>
+            <div className="space-y-3 text-slate-600 leading-relaxed pl-2 border-l-2 border-slate-50">
+              <p>• Utilisation de <span className="font-bold">Google Analytics</span> pour l'administration.</p>
+              <p>• Absence de cookies publicitaires tiers.</p>
+              <p>• Interaction future envisagée via <span className="font-bold">WAZZAP AI</span> pour le support client.</p>
             </div>
           </section>
 
-          {/* Propriété Intellectuelle */}
-          <section className="space-y-6">
-            <div className="flex items-center gap-4">
-              <div className="p-3 bg-slate-50 rounded-2xl">
-                <Globe className="w-6 h-6 text-slate-600" />
+          {/* 5. Droits & Restrictions */}
+          <section className="space-y-6 md:col-span-2 bg-slate-50 p-8 rounded-3xl border border-slate-100">
+            <div className="flex flex-wrap gap-8">
+              <div className="flex-1 min-w-[250px] space-y-4">
+                <div className="flex items-center gap-3">
+                   <UserX className="w-5 h-5 text-red-500" />
+                   <h3 className="font-black uppercase text-sm tracking-widest">Accès Mineurs</h3>
+                </div>
+                <p className="text-slate-500 text-sm">Les services de LAAFI Cargo International sont strictement réservés aux personnes majeures (18 ans et plus).</p>
               </div>
-              <h2 className="text-xl font-black uppercase tracking-tight">Propriété</h2>
-            </div>
-            <div className="pl-2 border-l-2 border-slate-50">
-              <p className="text-slate-600 leading-relaxed italic text-sm">
-                L'ensemble du contenu (logos, textes, visuels) appartient à [NOM]. 
-                Toute reproduction sans accord est passible de poursuites.
-              </p>
+              
+              <div className="flex-1 min-w-[250px] space-y-4">
+                <div className="flex items-center gap-3">
+                   <EyeOff className="w-5 h-5 text-slate-400" />
+                   <h3 className="font-black uppercase text-sm tracking-widest">Gestion des Droits</h3>
+                </div>
+                <p className="text-slate-500 text-sm">Conformément à notre politique interne, les données enregistrées ne sont pas modifiables ou supprimables par l'utilisateur une fois validées pour des raisons de traçabilité logistique.</p>
+              </div>
+
+              <div className="flex-1 min-w-[250px] space-y-4">
+                <div className="flex items-center gap-3">
+                   <Lock className="w-5 h-5 text-blue-500" />
+                   <h3 className="font-black uppercase text-sm tracking-widest">Hébergement</h3>
+                </div>
+                <p className="text-slate-500 text-sm">L'infrastructure technique est sécurisée par cryptage de bout en bout pour garantir l'intégrité de vos informations.</p>
+              </div>
             </div>
           </section>
 
@@ -120,8 +152,8 @@ const MentionsLegales = () => {
 
         {/* Note de bas de page */}
         <footer className="mt-32 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">
-          <p>© 2026 [NOM DE L'ENTREPRISE] — AXIANE LOGISTICS</p>
-          <p>Mise à jour : Février 2026</p>
+          <p>© 2026 LAAFI CARGO INTERNATIONAL — OUAGADOUGOU</p>
+          <p>Dernière mise à jour : Février 2026</p>
         </footer>
 
       </div>

@@ -1,8 +1,17 @@
-﻿import ComingSoonPage from "@/components/shared/ComingSoonPage"
-import { Settings } from "lucide-react"
+﻿import { cookies } from "next/headers"
+import { redirect } from "next/navigation"
+import { SettingsView } from "@/components/shared/SettingsView"
 
-export default function settingsPage() {
+export default async function AgentBurkinaSettingsPage() {
+  const cookieStore = await cookies()
+  const session = cookieStore.get("session")
+  if (!session) redirect("/login")
+
+  const userData = JSON.parse(session.value)
+
   return (
-    <p>working on it</p>
+    <div className="p-4 md:p-8 pt-20 max-w-[1600px] mx-auto">
+      <SettingsView role={userData.role} />
+    </div>
   )
 }
