@@ -63,7 +63,7 @@ export default function Navbar({ user }: NavbarProps) {
             </div>
             <Link href="/" className="flex flex-col">
               <span className="text-xl font-black tracking-tighter text-slate-900 leading-none">
-                LAAFI<span className="text-blue-600">CARGO</span>
+                LAAFI<span className="text-blue-600">Express</span>
               </span>
               <span className="text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase">International</span>
             </Link>

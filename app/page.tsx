@@ -104,7 +104,7 @@ export default function LandingPage() {
              <div className="text-center mb-16 px-4">
                 <span className="text-blue-600 font-black tracking-[0.4em] uppercase text-xs">Division Solutions</span>
                 <TextReveal className="text-4xl md:text-6xl font-black mt-4 text-slate-900 tracking-tighter">
-                  VOTRE CARGO, NOTRE PRIORITÉ
+                  VOTRE COLIS, NOTRE PRIORITÉ
                 </TextReveal>
              </div>
              {/* Le composant Services utilise maintenant son propre design "Light" */}
