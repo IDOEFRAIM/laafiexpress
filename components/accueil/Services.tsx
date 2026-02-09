@@ -46,7 +46,7 @@ const ServiceCard = ({ title, desc, icon: Icon, features, index }: any) => (
       </ul>
       
       <Button variant="outline" asChild className="w-full justify-between rounded-none border border-slate-900 h-14 text-[10px] uppercase font-black tracking-[0.3em] bg-white text-slate-900 hover:bg-slate-900 hover:text-white transition-all group/btn px-6 shadow-sm">
-        <Link href="https://wa.me/22666663651" className="flex items-center justify-between w-full">
+        <Link href="https://wa.me/+22666663651" className="flex items-center justify-between w-full">
           Voir plus <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-2 transition-transform" />
         </Link>
       </Button>

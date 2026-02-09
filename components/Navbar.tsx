@@ -79,7 +79,7 @@ export default function Navbar({ user }: NavbarProps) {
                 <div className="flex items-center gap-3 mr-2">
                   {user.role === 'AGENT_CHINA' && <Button variant="outline" size="sm" asChild className="rounded-lg font-bold"><Link href="/agent_chine">Dashboard</Link></Button>}
                   {user.role === 'CLIENT' && <Button variant="outline" size="sm" asChild className="rounded-lg font-bold"><Link href="/client">Suivi</Link></Button>}
-                  {user.role === 'ADMIN' && <Button variant="outline" size="sm" asChild className="rounded-lg font-bold"><Link href="/admin">Admin</Link></Button>}
+                  {user.role === 'AGENT_BURKINA' && <Button variant="outline" size="sm" asChild className="rounded-lg font-bold"><Link href="/admin">Admin</Link></Button>}
                 </div>
                 <div className="text-right">
                   <p className="text-[10px] text-blue-600 uppercase font-black leading-none">{getRoleLabel(user.role)}</p>

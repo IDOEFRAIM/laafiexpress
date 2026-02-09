@@ -68,7 +68,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 py-7 text-lg shadow-lg shadow-blue-600/30 transition-all hover:scale-105">
                 <Link
-                href="+22601479800"
+                href="+22666663651"
                 >
                   Obtenir un devis
                 </Link>

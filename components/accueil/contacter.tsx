@@ -74,7 +74,7 @@ const ContactSection = () => {
           {/* --- PANEL GAUCHE : PROTOCOLES --- */}
           <div className="lg:col-span-4 border-r border-slate-900 divide-y divide-slate-900 bg-slate-50/30">
             <div className="p-10">
-              <span className="text-[9px] font-mono text-blue-600 block mb-6 font-bold">// 01 OFFICE_LOC</span>
+              <span className="text-[9px] font-mono text-blue-600 block mb-6 font-bold">// 01 Position geographique</span>
               <h3 className="text-xs font-black uppercase tracking-[0.2em] mb-4 text-slate-400">Emplacement Physique</h3>
               <p className="text-sm font-bold uppercase leading-tight text-slate-900">
                 Samendin, Ouagadougou<br />
@@ -90,10 +90,10 @@ const ContactSection = () => {
             </div>
 
             <div className="p-10 h-full">
-               <span className="text-[9px] font-mono text-blue-600 block mb-6 font-bold">// 03 NETWORK_STATUS</span>
+               <span className="text-[9px] font-mono text-blue-600 block mb-6 font-bold">Delais de reponse</span>
                <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-[10px] font-black uppercase tracking-widest">Serveur Opérationnel</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest">2 jours</span>
                </div>
             </div>
           </div>

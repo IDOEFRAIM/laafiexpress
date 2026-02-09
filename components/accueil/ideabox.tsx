@@ -11,7 +11,7 @@ const IdeaBox = () => {
 
   const handleSubmission = (e: React.FormEvent) => {
     e.preventDefault()
-    const phoneNumber = "22666663651"
+    const phoneNumber = "+22666663651"
     const text = `*DOSSIER PROPOSITION - LAAFI CARGO*\n\n` +
                  `• *Domaine:* ${category}\n` +
                  `• *Idee:* ${idea}`
@@ -44,7 +44,7 @@ const IdeaBox = () => {
             </h2>
           </div>
           <p className="max-w-[280px] text-[10px] font-bold uppercase tracking-widest text-slate-400 leading-relaxed border-l-2 border-slate-900 pl-6">
-            L'excellence opérationnelle naît de la collaboration. Soumettez vos axes d'optimisation pour le corridor Chine-Afrique.
+            Notre excellence vient du fait que nous savons ecouter nos clients. Soumettez vos propositions afin d'ameliorer nos services.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ const IdeaBox = () => {
                     <Plus className="w-5 h-5 text-slate-900" />
                   </div>
                   <span className="text-[10px] font-black uppercase tracking-widest leading-tight">
-                    Transmission directe <br /> au directoire technique
+                    Transmission directe <br /> au plus hautes instances de laafi Express
                   </span>
                 </div>
 

@@ -60,7 +60,7 @@ const PricingSection = () => {
           <div className="lg:col-span-8">
             <div className="flex items-center gap-4 mb-6 text-blue-600">
               <Percent size={18} strokeWidth={3} />
-              <span className="text-[10px] font-black uppercase tracking-[0.5em]">Unit_Cost // 2026 Edition</span>
+              <span className="text-[10px] font-black uppercase tracking-[0.5em]">Prix // 2026 Edition</span>
             </div>
             <h2 className="text-6xl md:text-[100px] font-black leading-[0.8] tracking-tighter uppercase text-slate-900">
               GRILLES <br />
