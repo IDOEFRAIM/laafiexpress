@@ -36,7 +36,7 @@ const getMenuItems = (role: string) => {
   }
 
   // Tous les rôles ont accès à la facturation (Côté agent pour gérer, côté client pour voir)
-  items.push({ icon: CreditCard, label: "Facturation", href: `${basePath}/billing` })
+  // items.push({ icon: CreditCard, label: "Facturation", href: `${basePath}/billing` })
 
   items.push(
     { icon: Users, label: "Profil", href: `${basePath}/profile` },

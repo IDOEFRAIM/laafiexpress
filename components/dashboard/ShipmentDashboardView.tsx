@@ -287,7 +287,7 @@ export function ShipmentDashboardView({
                         <div className={cn("w-2 h-2 rounded-full", isActive ? "bg-green-400 animate-pulse" : "bg-blue-500")} />
                         <span className="font-black text-sm uppercase tracking-wide">{(shipment.status || 'RECU_CHINE').replace('_', ' ')}</span>
                       </div>
-                      {shipment.invoices && shipment.invoices[0] && (
+                      {/* {shipment.invoices && shipment.invoices[0] && (
                         <span className={cn(
                           "text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter",
                           shipment.invoices[0].status === 'PAYE' 
@@ -296,7 +296,7 @@ export function ShipmentDashboardView({
                         )}>
                           {shipment.invoices[0].status === 'PAYE' ? 'Payé' : 'Impayé'}
                         </span>
-                      )}
+                      )} */}
                     </div>
                   </div>
                 </div>
@@ -453,7 +453,7 @@ export function ShipmentDashboardView({
                           />
                         </div>
 
-                        {activeShipment.invoiceUrl && (
+                        {/* {activeShipment.invoiceUrl && (
                           <div className="flex items-center justify-between p-6 bg-green-50 dark:bg-green-900/10 border border-green-100 dark:border-green-800/50 rounded-3xl group cursor-pointer hover:bg-green-100 transition-colors">
                             <div className="flex items-center gap-4">
                               <div className="w-12 h-12 bg-green-600 rounded-2xl flex items-center justify-center text-white">
@@ -473,11 +473,11 @@ export function ShipmentDashboardView({
                               <Download className="w-4 h-4 text-green-600" />
                             </a>
                           </div>
-                        )}
+                        )} */}
 
                         <DetailItem icon={Navigation} label="Real-time Tracking" value={activeShipment.trackingNumber} color="orange" />
 
-                        {activeShipment.invoices && activeShipment.invoices.length > 0 && (
+                        {/* {activeShipment.invoices && activeShipment.invoices.length > 0 && (
                           <div className={cn(
                             "p-6 rounded-[2rem] border transition-all",
                             activeShipment.invoices[0].status === 'PAYE' 
@@ -509,7 +509,7 @@ export function ShipmentDashboardView({
                               </div>
                             )}
                           </div>
-                        )}
+                        )} */}
 
                         <div className="p-4 bg-blue-50 dark:bg-blue-900/10 rounded-2xl border border-blue-100 dark:border-blue-800/50">
                           <div className="flex items-center gap-2 mb-1">

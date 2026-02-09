@@ -1,29 +1,39 @@
+'use client'
+
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { cookies } from 'next/headers'
-import { Button } from '@/components/ui/button'
 import { 
   LogOut, 
-  User, 
   Ship, 
   Package, 
   ShieldCheck, 
-  ChevronRight 
+  Menu, 
+  X, 
+  UserCircle,
+  Info,
+  Truck,
+  Tag,
+  Phone
 } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
-export async function Navbar() {
-  const cookieStore = await cookies()
-  const sessionCookie = cookieStore.get('session')
-  
-  let user = null
-  if (sessionCookie) {
-    try {
-      user = JSON.parse(sessionCookie.value)
-    } catch (e) {
-      user = null
-    }
-  }
+interface NavbarProps {
+  user?: {
+    role: string;
+    name?: string;
+  } | null;
+}
 
-  // Fonction pour transformer le rôle technique en nom lisible
+export default function Navbar({ user }: NavbarProps) {
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   const getRoleLabel = (role: string) => {
     const roles: Record<string, string> = {
       'AGENT_CHINA': 'Logistique Chine',
@@ -35,91 +45,128 @@ export async function Navbar() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur-md w-full">
+    <nav className={`sticky top-0 z-[100] w-full transition-all duration-300 ${
+      scrolled ? 'bg-white/90 backdrop-blur-lg shadow-sm border-b' : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+        <div className="flex justify-between h-20 items-center">
           
-          {/* Logo & Branding */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <Ship size={20} className="text-white" />
+          {/* --- LOGO --- */}
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200 rotate-3">
+              <Ship size={24} className="text-white -rotate-3" />
             </div>
-            <Link href="/" className="text-xl font-black tracking-tighter text-slate-900">
-              LAAFI<span className="text-blue-600 underline decoration-2 underline-offset-4">EXPRESS</span>
+            <Link href="/" className="flex flex-col">
+              <span className="text-xl font-black tracking-tighter text-slate-900 leading-none">
+                LAAFI<span className="text-blue-600">CARGO</span>
+              </span>
+              <span className="text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase">International</span>
             </Link>
           </div>
 
-          {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-6">
-            {user ? (
-              <div className="flex items-center gap-8">
-                {/* Liens Dynamiques selon Rôle */}
-                <div className="flex items-center gap-4">
-                  {user.role === 'AGENT_CHINA' && (
-                    <NavLink href="/agent_chine" icon={<Ship size={18} />} label="Expéditions" />
-                  )}
-                  {user.role === 'AGENT_BURKINA' && (
-                    <NavLink href="/agent_burkina" icon={<Package size={18} />} label="Arrivages" />
-                  )}
-                  {user.role === 'CLIENT' && (
-                    <NavLink href="/client" icon={<Package size={18} />} label="Suivi Colis" />
-                  )}
-                  {user.role === 'ADMIN' && (
-                    <NavLink href="/admin" icon={<ShieldCheck size={18} />} label="Panel Admin" />
-                  )}
-                </div>
+          {/* --- DESKTOP NAV --- */}
+          <div className="hidden md:flex items-center gap-8">
+            {/* Liens de navigation ancres (Visibles pour tous) */}
+            <div className="flex items-center gap-1">
+              <NavLink href="/#about" icon={<Info size={16} />} label="À propos" />
+              <NavLink href="/#services" icon={<Truck size={16} />} label="Services" />
+              <NavLink href="/#pricing" icon={<Tag size={16} />} label="Tarifs" />
+              <NavLink href="/#contact" icon={<Phone size={16} />} label="Contact" />
+            </div>
 
-                {/* Profil & Logout */}
-                <div className="flex items-center gap-3 pl-6 border-l border-slate-200">
-                  <div className="text-right mr-2">
-                    <p className="text-xs font-bold text-slate-900 leading-tight">Connecté</p>
-                    <p className="text-[10px] text-blue-600 uppercase font-bold tracking-wider">
-                      {getRoleLabel(user.role)}
-                    </p>
-                  </div>
-                  
-                  <form action="/api/auth/logout" method="POST">
-                    <Button 
-                      variant="ghost" 
-                      size="sm" 
-                      className="h-10 w-10 rounded-full text-slate-400 hover:text-red-600 hover:bg-red-50 transition-all"
-                      title="Se déconnecter"
-                    >
-                      <LogOut size={20} />
-                    </Button>
-                  </form>
+            {user ? (
+              <div className="flex items-center gap-4 pl-6 border-l border-slate-200">
+                <div className="flex items-center gap-3 mr-2">
+                  {user.role === 'AGENT_CHINA' && <Button variant="outline" size="sm" asChild className="rounded-lg font-bold"><Link href="/agent_chine">Dashboard</Link></Button>}
+                  {user.role === 'CLIENT' && <Button variant="outline" size="sm" asChild className="rounded-lg font-bold"><Link href="/client">Suivi</Link></Button>}
+                  {user.role === 'ADMIN' && <Button variant="outline" size="sm" asChild className="rounded-lg font-bold"><Link href="/admin">Admin</Link></Button>}
                 </div>
+                <div className="text-right">
+                  <p className="text-[10px] text-blue-600 uppercase font-black leading-none">{getRoleLabel(user.role)}</p>
+                  <p className="text-xs font-bold text-slate-900">Connecté</p>
+                </div>
+                <form action="/api/auth/logout" method="POST">
+                  <Button variant="ghost" size="icon" className="rounded-full hover:bg-red-50 hover:text-red-600">
+                    <LogOut size={20} />
+                  </Button>
+                </form>
               </div>
             ) : (
-              /* État Déconnecté */
-              <div className="flex items-center gap-3">
-                <Link href="/login">
-                  <Button variant="ghost" className="text-slate-600 font-semibold hover:text-blue-600">
-                    Connexion
-                  </Button>
+              <div className="flex items-center gap-4 pl-6 border-l border-slate-200">
+                <Link href="/login" className="text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
+                  Connexion
                 </Link>
                 <Link href="/register">
-                  <Button className="bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200 px-6 rounded-full transition-all flex items-center gap-2">
-                    Ouvrir un compte <ChevronRight size={16} />
+                  <Button className="bg-slate-900 hover:bg-blue-600 text-white px-6 rounded-xl font-bold text-xs uppercase tracking-widest transition-all shadow-xl">
+                    Compte
                   </Button>
                 </Link>
               </div>
             )}
           </div>
+
+          {/* --- MOBILE BURGER --- */}
+          <div className="md:hidden flex items-center">
+            <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors">
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* --- MOBILE MENU --- */}
+      {isOpen && (
+        <div className="md:hidden absolute top-20 left-0 w-full bg-white border-b shadow-2xl p-4 space-y-4 animate-in slide-in-from-top duration-300">
+          <div className="grid grid-cols-1 gap-1">
+            <MobileNavLink href="/#about" label="À propos" onClick={() => setIsOpen(false)} />
+            <MobileNavLink href="/#services" label="Services" onClick={() => setIsOpen(false)} />
+            <MobileNavLink href="/#pricing" label="Tarifs" onClick={() => setIsOpen(false)} />
+            <MobileNavLink href="/#contact" label="Contact" onClick={() => setIsOpen(false)} />
+          </div>
+
+          <div className="h-px bg-slate-100 my-2" />
+
+          {user ? (
+            <div className="space-y-4">
+               <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-2xl">
+                  <UserCircle size={40} className="text-blue-600" />
+                  <div>
+                    <p className="text-sm font-black text-slate-900">{getRoleLabel(user.role)}</p>
+                    <Link href={user.role === 'CLIENT' ? '/client' : '/admin'} onClick={() => setIsOpen(false)} className="text-xs text-blue-600 font-bold underline">Aller au tableau de bord</Link>
+                  </div>
+                </div>
+                <form action="/api/auth/logout" method="POST">
+                  <Button className="w-full justify-start gap-3 bg-red-50 text-red-600 hover:bg-red-100 border-none shadow-none">
+                    <LogOut size={18} /> Déconnexion
+                  </Button>
+                </form>
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 gap-4">
+              <Link href="/login" onClick={() => setIsOpen(false)} className="py-4 text-center font-bold text-slate-900 border border-slate-200 rounded-2xl italic">Connexion</Link>
+              <Link href="/register" onClick={() => setIsOpen(false)} className="py-4 text-center font-bold text-white bg-blue-600 rounded-2xl">S'inscrire</Link>
+            </div>
+          )}
+        </div>
+      )}
     </nav>
   )
 }
 
-// Petit composant utilitaire pour les liens
 function NavLink({ href, icon, label }: { href: string, icon: React.ReactNode, label: string }) {
   return (
-    <Link 
-      href={href} 
-      className="text-sm font-semibold text-slate-600 hover:text-blue-600 flex items-center gap-2 transition-colors py-2 px-1 border-b-2 border-transparent hover:border-blue-600"
-    >
-      {icon}
+    <Link href={href} className="group flex items-center gap-2 text-[13px] font-bold text-slate-500 hover:text-blue-600 transition-all px-3 py-2 rounded-lg hover:bg-blue-50/50">
+      <span className="text-slate-400 group-hover:text-blue-600 transition-colors">
+        {icon}
+      </span>
+      {label}
+    </Link>
+  )
+}
+
+function MobileNavLink({ href, label, onClick }: { href: string, label: string, onClick: () => void }) {
+  return (
+    <Link href={href} onClick={onClick} className="block w-full p-4 text-base font-bold text-slate-900 hover:bg-slate-50 rounded-xl transition-colors italic">
       {label}
     </Link>
   )
