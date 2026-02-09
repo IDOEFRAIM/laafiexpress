@@ -53,7 +53,7 @@ const HeroSection = () => {
             <h1 className="text-6xl md:text-8xl font-black text-white leading-[1.1] tracking-tight mb-8 drop-shadow-lg">
               L'excellence du <br />
               <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-200 via-white to-blue-200">
-                Fret International.
+                Transport International.
               </span>
             </h1>
           </Reveal>

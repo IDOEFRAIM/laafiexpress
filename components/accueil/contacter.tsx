@@ -21,7 +21,7 @@ const ContactSection = () => {
     e.preventDefault()
     
     // Numéro de LAAFI Cargo
-    const phoneNumber = "22601479800" 
+    const phoneNumber = "+22666663651" 
     
     // Construction du message formaté (Style Bordereau)
     const text = `*Nouveau message depuis le siteweb - LAAFI CARGO*\n\n` +
