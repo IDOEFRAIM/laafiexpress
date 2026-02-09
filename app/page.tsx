@@ -35,6 +35,7 @@ function TextReveal({ children, className }: { children: string, className?: str
   )
 }
 
+
 export default function LandingPage() {
   const containerRef = useRef(null)
 
@@ -60,7 +61,7 @@ export default function LandingPage() {
       
       {/* Barre de progression subtile */}
       <motion.div 
-        className="fixed top-0 left-0 right-0 h-1 bg-blue-600 z-[110] origin-left"
+        className="fixed top-0 left-0 right-0 h-1 bg-blue-600 z-110 origin-left"
         style={{ scaleX: smoothProgress }}
       />
 
