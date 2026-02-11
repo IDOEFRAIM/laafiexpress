@@ -1,8 +1,7 @@
 'use client'
 
-import React from 'react'
 import { motion } from 'framer-motion'
-import { ShieldCheck, Anchor, Globe, Briefcase } from 'lucide-react'
+import { ShieldCheck, Globe, Briefcase } from 'lucide-react'
 
 const AboutSection = () => {
   return (
@@ -25,7 +24,7 @@ const AboutSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               className="flex items-center gap-4 mb-8"
             >
-              <span className="text-[10px] font-black uppercase tracking-[0.5em] text-blue-600">Corporate Identity</span>
+              <span className="text-[10px] font-black uppercase tracking-[0.5em] text-blue-600">Notre identite</span>
               <div className="h-px w-24 bg-slate-200" />
             </motion.div>
             
@@ -35,14 +34,14 @@ const AboutSection = () => {
             </h2>
             
             <p className="text-xl md:text-3xl font-light text-slate-500 max-w-2xl leading-tight">
-              LAAFI CARGO INTERNATIONAL est le trait d'union stratégique entre les hubs industriels de <span className="text-slate-900 font-bold uppercase">Chine</span> et la dynamique économique du <span className="text-slate-900 font-bold uppercase">Burkina Faso</span>.
+              LAAFI CARGO INTERNATIONAL est un pont stratégique entre la<span className="text-slate-900 font-bold uppercase">Chine</span> et la dynamique économique du <span className="text-slate-900 font-bold uppercase">Burkina Faso</span>.
             </p>
           </div>
 
           {/* Badge de localisation technique */}
           <div className="lg:col-span-4 flex flex-col justify-end">
             <div className="bg-slate-50 border border-slate-200 p-8">
-              <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest block mb-4">// Siège Opérationnel</span>
+              <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest block mb-4"> Siège </span>
               <p className="text-sm font-black uppercase tracking-tighter mb-2 text-slate-900">Ouagadougou, Samandin</p>
               <p className="text-xs font-medium text-slate-500 uppercase leading-relaxed">
                 Face Pharmacie WATI <br />
@@ -59,11 +58,11 @@ const AboutSection = () => {
           <div className="p-12 border-b md:border-b-0 md:border-r border-slate-900 group hover:bg-slate-50 transition-colors">
             <div className="flex justify-between items-start mb-12">
               <Globe className="w-6 h-6 text-slate-900" />
-              <span className="text-[10px] font-mono text-slate-300">MOD_01</span>
+              <span className="text-[10px] font-mono text-slate-300">01</span>
             </div>
             <h3 className="text-xs font-black uppercase tracking-[0.3em] mb-6 text-blue-600">Notre Mission</h3>
             <p className="text-sm font-bold uppercase leading-relaxed text-slate-600">
-              Faciliter l'importation de marchandises avec une précision chirurgicale, garantissant fluidité et sécurité sur tout le corridor Chine-Burkina.
+              Nous facilitons l'importation de vos marchandises avec une précision chirurgicale, garantissant fluidité et sécurité sur tout le corridor Chine-Burkina.
             </p>
           </div>
 
@@ -71,7 +70,7 @@ const AboutSection = () => {
           <div className="p-12 border-b md:border-b-0 md:border-r border-slate-900 bg-slate-50/50">
             <div className="flex justify-between items-start mb-12">
               <Briefcase className="w-6 h-6 text-slate-900" />
-              <span className="text-[10px] font-mono text-slate-300">MOD_02</span>
+              <span className="text-[10px] font-mono text-slate-300">02</span>
             </div>
             <h3 className="text-xs font-black uppercase tracking-[0.3em] mb-8 text-blue-600">Registre d'Entreprise</h3>
             <div className="space-y-6">
@@ -90,7 +89,7 @@ const AboutSection = () => {
           <div className="p-12 group hover:bg-slate-50 transition-colors">
             <div className="flex justify-between items-start mb-12">
               <ShieldCheck className="w-6 h-6 text-slate-900" />
-              <span className="text-[10px] font-mono text-slate-300">MOD_03</span>
+              <span className="text-[10px] font-mono text-slate-300">03</span>
             </div>
             <h3 className="text-xs font-black uppercase tracking-[0.3em] mb-8 text-blue-600">Autorité & Conformité</h3>
             <div className="space-y-6">
@@ -111,14 +110,13 @@ const AboutSection = () => {
 
         {/* FOOTER DE SECTION : CHIFFRES CLÉS OU MENTION LÉGALE */}
         <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-8 border-b border-slate-100 pb-12">
-          <span className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-300 italic">Established in 2025 // Global Logistics Standard</span>
           <div className="flex gap-8">
              <div className="text-center">
-                <p className="text-[9px] font-mono text-slate-300 mb-1">Hub Principal</p>
+                <p className="text-[9px] font-mono text-slate-300 mb-1">Position en chine</p>
                 <p className="text-xs font-black uppercase tracking-widest">Guangzhou, CN</p>
              </div>
              <div className="text-center">
-                <p className="text-[9px] font-mono text-slate-300 mb-1">Terminal Arrivée</p>
+                <p className="text-[9px] font-mono text-slate-300 mb-1">Position au Burkina</p>
                 <p className="text-xs font-black uppercase tracking-widest">Ouagadougou, BF</p>
              </div>
           </div>

@@ -35,7 +35,7 @@ export const generateManifestPDF = (data: ManifestData) => {
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(22);
   doc.setFont('helvetica', 'bold');
-  doc.text('LAAFI CARGO EXPRESS', 15, 20);
+  doc.text('LAAFI CARGO', 15, 20);
   
   doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');
@@ -89,7 +89,7 @@ export const generateManifestPDF = (data: ManifestData) => {
     doc.setPage(i);
     doc.setFontSize(8);
     doc.setTextColor(150);
-    doc.text(`Généré le ${format(new Date(), 'dd/MM/yyyy HH:mm')} - Laafi Cargo Express - Page ${i}/${pageCount}`, pageWidth / 2, doc.internal.pageSize.getHeight() - 10, { align: 'center' });
+    doc.text(`Généré le ${format(new Date(), 'dd/MM/yyyy HH:mm')} - Laafi Cargo - Page ${i}/${pageCount}`, pageWidth / 2, doc.internal.pageSize.getHeight() - 10, { align: 'center' });
   }
 
   // Save/Download

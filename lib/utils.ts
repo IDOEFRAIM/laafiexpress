@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-// Utilitaire spécifique pour Laafi Express
+// Utilitaire spécifique pour Laafi Cargo
 export function formatCFA(amount: number) {
   return new Intl.NumberFormat('fr-FR', {
     style: 'currency',

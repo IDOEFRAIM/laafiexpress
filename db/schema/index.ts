@@ -9,7 +9,7 @@ export * from "./cargo";
 export * from "./billing";
 
 /**
- * RELATIONS : Laafi Express Logic
+ * RELATIONS : Laafi Cargo Logic
  */
 
 // Un Client a plusieurs Colis et plusieurs Factures

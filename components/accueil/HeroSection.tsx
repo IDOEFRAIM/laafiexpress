@@ -42,15 +42,15 @@ const HeroSection = () => {
       </motion.div>
 
       <div className="container mx-auto px-6 relative z-10 w-full -mt-25">
-        <div className="max-w-4xl">
+        <div className="max-w-4xl mt-10">
           <Reveal delay={0.1}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-100 backdrop-blur-md text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 text-yellow-300" /> Leader du transport Chine-Afrique
+              <Sparkles className="w-4 h-4  text-yellow-300" /> Leader du transport Chine-Afrique
             </div>
           </Reveal>
 
           <Reveal delay={0.2}>
-            <h1 className="text-6xl md:text-8xl font-black text-white leading-[1.1] tracking-tight mb-8 drop-shadow-lg">
+            <h1 className="text-3xl md:text-8xl font-black text-white leading-[1.1] tracking-tight mb-8 drop-shadow-lg">
               L'excellence du <br />
               <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-200 via-white to-blue-200">
                 Transport International.
@@ -60,7 +60,7 @@ const HeroSection = () => {
 
           <Reveal delay={0.3}>
             <p className="text-xl md:text-2xl text-blue-50 font-light max-w-2xl leading-relaxed mb-12 drop-shadow-md">
-                Connectez la Chine, l'Europe et l'Afrique. Une gestion logistique transparente et sécurisée pour les entreprises exigeantes.
+                Connectez la Chine et l'Afrique. Une gestion logistique transparente et sécurisée pour les entreprises exigeantes.
             </p>
           </Reveal>
 

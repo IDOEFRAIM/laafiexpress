@@ -81,7 +81,7 @@ const handleLogin = async (e: React.FormEvent) => {
                             <Lock size={24} />
                         </div>
                     </div>
-                    <CardTitle className="text-2xl font-bold tracking-tight">Laafi Express CRM</CardTitle>
+                    <CardTitle className="text-2xl font-bold tracking-tight">Laafi Cargo CRM</CardTitle>
                     <CardDescription>
                         Accédez à votre espace logistique
                     </CardDescription>
@@ -109,7 +109,7 @@ const handleLogin = async (e: React.FormEvent) => {
                                 <Input
                                     id="email"
                                     type="email"
-                                    placeholder="nom@laafi-express.com"
+                                    placeholder="nom@Laafi-Cargo.com"
                                     className="pl-10 focus-visible:ring-blue-600"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
@@ -144,7 +144,7 @@ const handleLogin = async (e: React.FormEvent) => {
                         </Button>
                         
                         <p className="text-sm text-center text-slate-600">
-                            Nouveau chez Laafi Express ?{' '}
+                            Nouveau chez Laafi Cargo ?{' '}
                             <Link href="/register" className="text-blue-600 font-semibold hover:underline inline-flex items-center">
                                 Créer un compte <ArrowRight className="ml-1 h-3 w-3" />
                             </Link>

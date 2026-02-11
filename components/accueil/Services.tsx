@@ -20,7 +20,7 @@ const ServiceCard = ({ title, desc, icon: Icon, features, index }: any) => (
         <Icon className="w-7 h-7 stroke-[1.2px]" />
       </div>
       <div className="text-right">
-        <span className="text-[9px] font-mono text-slate-300 tracking-[0.4em] uppercase block">Service_Ref</span>
+        <span className="text-[9px] font-mono text-slate-300 tracking-[0.4em] uppercase block">Service</span>
         <span className="text-[10px] font-black text-slate-900 uppercase">00{index + 1}</span>
       </div>
     </div>
@@ -71,7 +71,7 @@ const ServicesSection = () => {
           <div className="lg:col-span-8">
             <div className="flex items-center gap-4 mb-8">
                 <Activity className="w-4 h-4 text-blue-600" />
-                <span className="text-blue-600 font-black tracking-[0.6em] uppercase text-[10px]">Division Opérationnelle</span>
+                <span className="text-blue-600 font-black tracking-[0.6em] uppercase text-[10px]">Laafi Cargo International</span>
             </div>
             <h2 className="text-6xl md:text-[100px] font-black text-slate-900 leading-[0.8] tracking-tighter uppercase">
               FLUX <br />
@@ -80,7 +80,7 @@ const ServicesSection = () => {
           </div>
           <div className="lg:col-span-4 border-l-2 border-slate-100 pl-8">
             <p className="text-slate-400 text-[11px] uppercase tracking-[0.2em] leading-relaxed font-bold">
-              LAAFI EXPRESS déploie une ingénierie logistique dédiée au corridor Chine-Burkina Faso pour une performance sans compromis.
+              Laafi Cargo déploie une ingénierie logistique dédiée au corridor Chine-Burkina Faso pour une performance sans compromis.
             </p>
           </div>
         </div>
@@ -89,28 +89,28 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-3 border border-slate-100 bg-white shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)]">
           <ServiceCard 
             index={0}
-            title="Groupage Aérien & Maritime"
-            desc="Optimisation des envois fractionnés. Nous mutualisons vos marchandises pour réduire drastiquement vos coûts de transport."
+            title="Transport Partagé (Groupage)"
+            desc="Ne payez que l'espace que vous utilisez. Nous regroupons vos petits colis pour vous faire profiter des tarifs de gros, par avion ou par bateau."
             icon={Ship}
-            features={["Consolidation Hebdomadaire", "Fret Aérien Express", "Sécurisation Cargo"]}
+            features={["Départs chaque semaine", "Livraison Express", "Colis suivis et sécurisés"]}
           />
           <ServiceCard 
             index={1}
-            title="Location de Conteneurs"
-            desc="Solutions FCL (Full Container Load) sur mesure. Mise à disposition d'unités 20' et 40' pour vos imports industriels."
+            title="Conteneurs Complets"
+            desc="Besoin de tout un conteneur ? Nous mettons à votre disposition des unités de 20 ou 40 pieds pour vos grosses commandes, avec une gestion totale."
             icon={Container}
-            features={["Unités Scellées", "Gestion de Parc", "Transit Porte-à-Porte"]}
+            features={["Conteneur scellé", "Livraison direct usine", "Suivi en temps réel"]}
           />
           <ServiceCard 
             index={2}
-            title="Négoce International"
-            desc="Vente et achat de marchandises. Nous servons de relais stratégique pour sécuriser vos transactions commerciales en Chine."
+            title="Achat & Recherche en Chine"
+            desc="On trouve pour vous les meilleurs produits au meilleur prix. Nous vérifions la qualité sur place et sécurisons vos paiements aux fournisseurs."
             icon={ShoppingCart}
-            features={["Sourcing Fournisseurs", "Contrôle Qualité", "Transactions Sécurisées"]}
+            features={["Recherche de fournisseurs", "Vérification des produits", "Paiements sécurisés"]}
           />
         </div>
 
-        {/* Footer de section technique */}
+        {/* Footer de section technique
         <div className="mt-20 flex flex-wrap justify-between items-center gap-6 opacity-60">
             <div className="flex gap-12 text-slate-900">
                 <div className="flex flex-col">
@@ -124,7 +124,7 @@ const ServicesSection = () => {
             </div>
             <div className="h-px grow bg-slate-100 mx-8 hidden lg:block" />
             <span className="text-[9px] font-mono text-slate-400 uppercase tracking-[0.4em]">LAAFI EXPRESS // LOGISTICS SYSTEM</span>
-        </div>
+        </div> */}
       </div>
     </section>
   )

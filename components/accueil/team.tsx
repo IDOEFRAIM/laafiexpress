@@ -30,7 +30,6 @@ const LeadershipSection = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white/80 to-transparent">
                   <div className="flex items-center gap-3">
                     <Fingerprint size={16} className="text-blue-600" />
-                    <span className="text-[9px] font-mono text-slate-900 uppercase tracking-widest">Biometric_Verify: OK</span>
                   </div>
                 </div>
               </div>

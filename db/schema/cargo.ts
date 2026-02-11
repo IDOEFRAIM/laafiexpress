@@ -44,7 +44,7 @@ export const containers = pgTable("containers", {
 });
 
 /**
- * TABLE SHIPMENTS (Le cœur de Laafi Express)
+ * TABLE SHIPMENTS (Le cœur de Laafi Cargo)
  */
 export const shipments = pgTable("shipments", {
   id: uuid("id").primaryKey().defaultRandom(),

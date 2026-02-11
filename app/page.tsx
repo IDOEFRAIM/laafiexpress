@@ -107,7 +107,6 @@ export default function LandingPage() {
                   VOTRE COLIS, NOTRE PRIORITÉ
                 </TextReveal>
              </div>
-             {/* Le composant Services utilise maintenant son propre design "Light" */}
              <Services />
            </div>
         </div>

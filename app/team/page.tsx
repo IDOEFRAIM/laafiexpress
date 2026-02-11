@@ -87,7 +87,7 @@ export default function StoryInPic() {
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
                 <Zap size={14} className="text-blue-600 fill-blue-600" />
-                <span className="text-[11px] font-black uppercase tracking-[0.6em] text-blue-600/50">Travel Express</span>
+                <span className="text-[11px] font-black uppercase tracking-[0.6em] text-blue-600/50">Laafi Cargo</span>
               </div>
               <h1 className="text-7xl md:text-[140px] font-black text-slate-900 leading-[0.8] tracking-[-0.06em]">
                 STORY <br />

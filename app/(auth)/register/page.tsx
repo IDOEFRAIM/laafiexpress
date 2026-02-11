@@ -61,7 +61,7 @@ export default function RegisterPage() {
                         </div>
                     </div>
                     <CardTitle className="text-2xl font-bold">Créer un compte</CardTitle>
-                    <CardDescription>Rejoignez l'équipe Laafi Express</CardDescription>
+                    <CardDescription>Rejoignez l'équipe Laafi Cargo</CardDescription>
                 </CardHeader>
                 <form onSubmit={handleRegister}>
                     <CardContent className="space-y-6">

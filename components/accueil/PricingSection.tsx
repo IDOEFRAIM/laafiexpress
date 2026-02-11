@@ -9,12 +9,11 @@ const PriceCard = ({ title, current, old, duration, details, isPromo }: any) => 
   <div className={`p-8 border-b border-r border-slate-900 flex flex-col justify-between group transition-colors ${isPromo ? 'bg-slate-50' : 'bg-white'}`}>
     <div className="flex justify-between items-start mb-8">
       <div>
-        <span className="text-[9px] font-mono text-slate-400 uppercase tracking-[0.3em] block mb-2">// Type_Log</span>
         <h3 className="text-xl font-black uppercase tracking-tighter text-slate-900">{title}</h3>
       </div>
       {isPromo && (
         <div className="bg-blue-600 text-white text-[9px] font-black px-3 py-1 uppercase tracking-widest animate-pulse">
-          Tactical_Offer
+          Promotion
         </div>
       )}
     </div>
@@ -78,7 +77,7 @@ const PricingSection = () => {
         <div className="mb-24">
           <div className="flex items-center gap-4 mb-8">
              <div className="px-4 py-2 bg-slate-900 text-white text-[10px] font-black uppercase tracking-[0.3em]">
-               Offres Promotionnelles_CNY_2026
+               Offres Promotionnelles(2026)
              </div>
              <div className="h-px flex-grow bg-slate-900" />
           </div>
@@ -114,7 +113,7 @@ const PricingSection = () => {
              <div className="flex items-center gap-3">
                 <div className="w-2 h-2 bg-slate-900 rotate-45" />
                 <span className="text-[11px] font-black uppercase tracking-[0.4em] text-slate-900">
-                  Protocoles Standards // 2026
+                  Protocoles Standards(2026)
                 </span>
              </div>
              <div className="h-px flex-grow bg-slate-200" />
@@ -125,7 +124,6 @@ const PricingSection = () => {
             {/* LTA - Version Épurée */}
             <div className="p-10 border-r border-b border-slate-200 lg:border-b-0 hover:bg-slate-50 transition-colors group">
               <div className="flex justify-between items-start mb-10">
-                <span className="text-[9px] font-mono text-slate-300 uppercase tracking-widest group-hover:text-blue-600 transition-colors">Ref_LTA-STD</span>
               </div>
               <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Aérien LTA</h4>
               <p className="text-3xl font-black text-slate-900 tracking-tighter">12 500 <span className="text-sm font-bold tracking-normal">FCFA</span></p>
@@ -135,7 +133,6 @@ const PricingSection = () => {
             {/* MCO - Version Épurée */}
             <div className="p-10 border-r border-b border-slate-200 lg:border-b-0 hover:bg-slate-50 transition-colors group">
               <div className="flex justify-between items-start mb-10">
-                <span className="text-[9px] font-mono text-slate-300 uppercase tracking-widest group-hover:text-blue-600 transition-colors">Ref_MCO-STD</span>
               </div>
               <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Aérien MCO</h4>
               <p className="text-3xl font-black text-slate-900 tracking-tighter">9 500 <span className="text-sm font-bold tracking-normal">FCFA</span></p>
@@ -145,7 +142,6 @@ const PricingSection = () => {
             {/* EXPRESS - Version Épurée */}
             <div className="p-10 border-r border-b border-slate-200 lg:border-b-0 hover:bg-slate-50 transition-colors group">
               <div className="flex justify-between items-start mb-10">
-                <span className="text-[9px] font-mono text-slate-300 uppercase tracking-widest group-hover:text-blue-600 transition-colors">Ref_EXP-STD</span>
               </div>
               <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Service Express</h4>
               <p className="text-3xl font-black text-slate-900 tracking-tighter">14 000 <span className="text-sm font-bold tracking-normal">FCFA</span></p>
@@ -162,7 +158,6 @@ const PricingSection = () => {
               <div className="flex justify-between items-start mb-10 relative z-10">
                 <div className="flex items-center gap-2">
                    <div className="w-2 h-2 bg-blue-600" />
-                   <span className="text-[9px] font-mono text-blue-600 uppercase tracking-widest font-black">Maritime_Heavy</span>
                 </div>
               </div>
               

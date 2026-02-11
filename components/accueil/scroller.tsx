@@ -31,7 +31,7 @@ const LogoScroller = () => {
         {/* Titre de section discret style technique */}
         <div className="container mx-auto px-6 mb-8">
           <div className="flex items-center gap-4">
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">Partenaires Réseau // Global Carriers</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-sky-400 text-2xl">Nos partenaires</span>
             <div className="h-px flex-grow bg-slate-100" />
           </div>
         </div>

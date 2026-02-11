@@ -16,7 +16,7 @@ const ServiceDetail = () => {
 
   // Simulation de données - À remplacer par vos props ou un fetch
   const service = {
-    code: "Laafi-express",
+    code: "Laafi-Cargo",
     category: "Air Freight",
     title: "Fret Aérien",
     subtitle: "Premium Logistics",
@@ -130,13 +130,13 @@ const ServiceDetail = () => {
           <div className="flex gap-4 w-full md:w-auto">
             <Button className="flex-1 md:flex-none rounded-none bg-slate-900 text-white hover:bg-blue-600 h-16 px-12 text-[10px] font-black uppercase tracking-[0.2em] transition-all">
               <Link
-              href={`https://wa.me/22601479800?text=Bonjour%20Laafi-express,%20je%20souhaite%20ouvrir%20un%20dossier%20pour%20le%20fret%20aérien.%20Merci!`}
+              href={`https://wa.me/22601479800?text=Bonjour%20Laafi Cargo,%20je%20souhaite%20ouvrir%20un%20dossier%20pour%20le%20fret%20aérien.%20Merci!`}
               >
               Demander un devis PDF</Link>
             </Button>
             <Button variant="outline" className="flex-1 md:flex-none rounded-none border-slate-200 h-16 px-12 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-slate-50">
                  <Link
-              href={`https://wa.me/22601479800?text=Bonjour%20Laafi-express,%20je%20souhaite%20ouvrir%20un%20dossier%20pour%20le%20fret%20aérien.%20Merci!`}
+              href={`https://wa.me/22601479800?text=Bonjour%20Laafi-Cargo,%20je%20souhaite%20ouvrir%20un%20dossier%20pour%20le%20fret%20aérien.%20Merci!`}
               >
               WhatsApp Direct</Link>
               
