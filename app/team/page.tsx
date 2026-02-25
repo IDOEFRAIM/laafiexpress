@@ -90,8 +90,8 @@ export default function StoryInPic() {
                 <span className="text-[11px] font-black uppercase tracking-[0.6em] text-blue-600/50">Laafi Cargo</span>
               </div>
               <h1 className="text-7xl md:text-[140px] font-black text-slate-900 leading-[0.8] tracking-[-0.06em]">
-                STORY <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-400 italic font-light">IN MOTION.</span>
+                Nos <br />
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-indigo-500 to-blue-400 italic font-light">ACTIVITES</span>
               </h1>
             </div>
 

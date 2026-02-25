@@ -102,7 +102,7 @@ export default function LandingPage() {
         <div id="services" className="py-24 bg-slate-50/50">
            <div className="max-w-7xl mx-auto">
              <div className="text-center mb-16 px-4">
-                <span className="text-blue-600 font-black tracking-[0.4em] uppercase text-xs">Division Solutions</span>
+                <span className="text-blue-600 font-black tracking-[0.4em] uppercase text-xs">Solutions</span>
                 <TextReveal className="text-4xl md:text-6xl font-black mt-4 text-slate-900 tracking-tighter">
                   VOTRE COLIS, NOTRE PRIORITÉ
                 </TextReveal>
@@ -112,7 +112,7 @@ export default function LandingPage() {
         </div>
 
         {/* 5. STATS (Le seul bloc de couleur forte pour l'impact) */}
-        <div className="bg-blue-600 py-24">
+        <div className="py-8">
            <Stat />
         </div>
 

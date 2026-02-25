@@ -1,9 +1,7 @@
 'use client'
 
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Ship, Plane, ArrowUpRight, Percent, Zap, Anchor } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+
+import { Percent } from 'lucide-react'
 
 const PriceCard = ({ title, current, old, duration, details, isPromo }: any) => (
   <div className={`p-8 border-b border-r border-slate-900 flex flex-col justify-between group transition-colors ${isPromo ? 'bg-slate-50' : 'bg-white'}`}>
@@ -20,10 +18,10 @@ const PriceCard = ({ title, current, old, duration, details, isPromo }: any) => 
 
     <div className="mb-8">
       <div className="flex items-baseline gap-3 flex-wrap">
-        <span className="text-4xl font-black tracking-tighter text-slate-900">{current} <small className="text-sm">FCFA</small></span>
+        <span className="text-4xl font-black tracking-tighter text-slate-900">{current} <small className="text-sm">FCFA/cbm</small></span>
         {old && (
           <span className="text-lg font-bold text-slate-300 line-through decoration-blue-600 decoration-2 tracking-tighter">
-            {old} F
+            {old} FCFA/cbm
           </span>
         )}
       </div>
@@ -44,7 +42,7 @@ const PriceCard = ({ title, current, old, duration, details, isPromo }: any) => 
 const PricingSection = () => {
   return (
     <section id="pricing" className="py-40 bg-white relative overflow-hidden">
-      {/* Blueprint Grid Background */}
+      {/* Blueprint Grid Baccbmround */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.06]" 
         style={{ 
           backgroundImage: `linear-gradient(#000 0.5px, transparent 0.5px), linear-gradient(90deg, #000 0.5px, transparent 0.5px)`,
@@ -79,7 +77,7 @@ const PricingSection = () => {
              <div className="px-4 py-2 bg-slate-900 text-white text-[10px] font-black uppercase tracking-[0.3em]">
                Offres Promotionnelles(2026)
              </div>
-             <div className="h-px flex-grow bg-slate-900" />
+             <div className="h-px grow bg-slate-900" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 border-t border-l border-slate-900 shadow-[20px_20px_0px_0px_rgba(37,99,235,0.05)]">
@@ -95,7 +93,7 @@ const PricingSection = () => {
             />
             <PriceCard 
               isPromo title="Express Bag/Box" current="14 000" 
-              duration="Conditionné (5kg Max)" 
+              duration="Conditionné (5cbm Max)" 
               details={["Traitement Prioritaire", "Bag ou Box requis", "Sortie J+1"]} 
             />
             <PriceCard 
@@ -113,10 +111,10 @@ const PricingSection = () => {
              <div className="flex items-center gap-3">
                 <div className="w-2 h-2 bg-slate-900 rotate-45" />
                 <span className="text-[11px] font-black uppercase tracking-[0.4em] text-slate-900">
-                  Protocoles Standards(2026)
+                  Prix Standards(2026)
                 </span>
              </div>
-             <div className="h-px flex-grow bg-slate-200" />
+             <div className="h-px grow bg-slate-200" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 border-2 border-slate-900 shadow-[15px_15px_0px_0px_rgba(0,0,0,0.02)]">
@@ -126,7 +124,7 @@ const PricingSection = () => {
               <div className="flex justify-between items-start mb-10">
               </div>
               <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Aérien LTA</h4>
-              <p className="text-3xl font-black text-slate-900 tracking-tighter">12 500 <span className="text-sm font-bold tracking-normal">FCFA</span></p>
+              <p className="text-3xl font-black text-slate-900 tracking-tighter">12 500 <span className="text-sm font-bold tracking-normal">FCFA/cbm</span></p>
               <div className="mt-6 h-1 w-0 bg-blue-600 group-hover:w-full transition-all duration-500" />
             </div>
 
@@ -135,7 +133,7 @@ const PricingSection = () => {
               <div className="flex justify-between items-start mb-10">
               </div>
               <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Aérien MCO</h4>
-              <p className="text-3xl font-black text-slate-900 tracking-tighter">9 500 <span className="text-sm font-bold tracking-normal">FCFA</span></p>
+              <p className="text-3xl font-black text-slate-900 tracking-tighter">9 500 <span className="text-sm font-bold tracking-normal">FCFA/cbm</span></p>
               <div className="mt-6 h-1 w-0 bg-blue-600 group-hover:w-full transition-all duration-500" />
             </div>
 
@@ -144,7 +142,7 @@ const PricingSection = () => {
               <div className="flex justify-between items-start mb-10">
               </div>
               <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Service Express</h4>
-              <p className="text-3xl font-black text-slate-900 tracking-tighter">14 000 <span className="text-sm font-bold tracking-normal">FCFA</span></p>
+              <p className="text-3xl font-black text-slate-900 tracking-tighter">14 000 <span className="text-sm font-bold tracking-normal">FCFA/cbm</span></p>
               <div className="mt-6 h-1 w-0 bg-blue-600 group-hover:w-full transition-all duration-500" />
             </div>
 
@@ -162,7 +160,7 @@ const PricingSection = () => {
               </div>
               
               <h4 className="text-[10px] font-black text-slate-900 uppercase tracking-[0.2em] mb-4 relative z-10 italic">Expédition Maritime (CBM)</h4>
-              <p className="text-3xl font-black text-slate-900 tracking-tighter relative z-10">2 500 000 <span className="text-sm font-bold tracking-normal">FCFA</span></p>
+              <p className="text-3xl font-black text-slate-900 tracking-tighter relative z-10">250 000 <span className="text-sm font-bold tracking-normal">FCFA/cbm</span></p>
               
               <div className="mt-8 pt-4 border-t border-slate-200 relative z-10">
                  <p className="text-[8px] font-mono text-slate-400 uppercase tracking-widest">

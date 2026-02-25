@@ -1,8 +1,8 @@
 'use client'
 
-import React from 'react'
-import { motion } from 'framer-motion'
+
 import { Award, Fingerprint, ShieldCheck, Quote } from 'lucide-react'
+import Image from 'next/image'
 
 const LeadershipSection = () => {
   return (
@@ -20,18 +20,13 @@ const LeadershipSection = () => {
           
           {/* --- PARTIE IMAGE (L'ASPECT ARCHITECTURAL) --- */}
           <div className="lg:col-span-5 relative">
-            <div className="relative z-10 border-[1px] border-slate-900 p-4 bg-white">
+            <div className="relative z-10 border border-slate-900 bg-white">
               {/* Remplacer par la vraie image du CEO */}
               <div className="aspect-[4/5] bg-slate-100 relative overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center text-slate-300 uppercase font-black text-[10px] tracking-widest">
-                  [ Portrait_CEO_Visual ]
+                  <img src="arrivage.jpeg" alt="ceo" />
                 </div>
-                {/* Overlay technique */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white/80 to-transparent">
-                  <div className="flex items-center gap-3">
-                    <Fingerprint size={16} className="text-blue-600" />
-                  </div>
-                </div>
+             
               </div>
             </div>
             
@@ -51,37 +46,38 @@ const LeadershipSection = () => {
               </div>
 
               <h2 className="text-5xl md:text-7xl font-black text-slate-900 uppercase tracking-tighter leading-none mb-6">
-                L'ENGAGEMENT <br />
-                <span className="text-slate-400 font-light italic">DU DIRECTOIRE.</span>
+                Mot <br />
+                <span className="text-slate-400 font-light italic">DE L'EQUIPE.</span>
               </h2>
 
               <div className="relative mb-12">
                 <Quote className="absolute -left-8 -top-4 w-12 h-12 text-blue-50 opacity-10" />
                 <p className="text-xl md:text-2xl text-slate-600 font-medium leading-relaxed italic">
-                  "Notre mission dépasse le simple transport. Nous bâtissons l'infrastructure invisible qui soutient la croissance entre la Chine et le Burkina Faso."
+                  "Notre mission dépasse le simple transport. Notre mission dépasse le simple transport. Chaque colis que nous acheminons représente une valeur, un projet, une attente. Nous le traitons avec sérieux, sécurité et engagement."
                 </p>
               </div>
 
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tighter">NOM DU CEO</h3>
-                  <p className="text-xs font-black text-blue-600 uppercase tracking-[0.3em] mt-1 italic">Fondateur & Chief Executive Officer</p>
+
+                  <p className="text-xs font-black text-blue-600 uppercase tracking-[0.3em] mt-2 italic">LAAFI CARGO INTERNATIONAL, le pont entre la Chine et le Burkina. </p>
+                  <p className="text-xs font-black text-blue-600 uppercase tracking-[0.3em] italic">LAAFI CARGO YA LAAFIII !!!</p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-8 pt-8 border-t border-slate-100">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <ShieldCheck size={14} className="text-slate-900" />
-                      <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Expertise</span>
+                      <span className="text-xs font-black uppercase tracking-widest text-slate-800">Expertise</span>
                     </div>
-                    <p className="text-xs font-bold uppercase text-slate-900 leading-tight">Supply Chain Management & International Trade</p>
+                    <p className="text-md font-bold uppercase text-slate-900 leading-tight">Importation rapide et fiable depuis la CHINE</p>
                   </div>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <Award size={14} className="text-slate-900" />
-                      <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Vision</span>
+                      <span className="text-xs font-black uppercase tracking-widest text-slate-800">Vision</span>
                     </div>
-                    <p className="text-xs font-bold uppercase text-slate-900 leading-tight">Digitalisation des flux Chine-Afrique</p>
+                    <p className="text-md font-bold uppercase text-slate-800 leading-tight">Simplifier le commerce CHINE-AFRIQUE</p>
                   </div>
                 </div>
               </div>
@@ -94,13 +90,13 @@ const LeadershipSection = () => {
         <div className="mt-32 flex justify-center">
             <div className="px-10 py-6 border border-slate-100 bg-slate-50/50 flex items-center gap-8 group hover:border-blue-600 transition-all cursor-default">
                 <div className="text-right">
-                    <p className="text-[8px] font-mono text-slate-300 uppercase tracking-widest">Authority_Level</p>
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em]">Full Executive Control</p>
+                    <p className="text-xs font-mono text-slate-800 uppercase tracking-widest">Sphere d'Autorite</p>
+                    <p className="text-md font-bold uppercase tracking-[0.2em]">Control total </p>
                 </div>
-                <div className="w-[1px] h-10 bg-slate-200" />
+                <div className="w h-10 bg-slate-200" />
                 <div>
-                    <p className="text-[8px] font-mono text-slate-300 uppercase tracking-widest">Verification_Status</p>
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600">Verified_Official</p>
+                    <p className="text-xs font-mono text-slate-800 uppercase tracking-widest">Status</p>
+                    <p className="text-md font-bold uppercase tracking-[0.2em] text-blue-600">Verifie</p>
                 </div>
             </div>
         </div>

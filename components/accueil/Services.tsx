@@ -80,7 +80,7 @@ const ServicesSection = () => {
           </div>
           <div className="lg:col-span-4 border-l-2 border-slate-100 pl-8">
             <p className="text-slate-400 text-[11px] uppercase tracking-[0.2em] leading-relaxed font-bold">
-              Laafi Cargo déploie une ingénierie logistique dédiée au corridor Chine-Burkina Faso pour une performance sans compromis.
+              Laafi Cargo déploie une ingénierie logistique entre la Chine et le Burkina pour une performance sans compromis.
             </p>
           </div>
         </div>

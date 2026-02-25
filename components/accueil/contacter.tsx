@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { ArrowUpRight,Zap, MessageCircle, Smile } from 'lucide-react'
+import { ArrowUpRight,Zap, MessageCircle, Smile, Facebook, Instagram, Linkedin} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const ContactSection = () => {
@@ -88,7 +88,7 @@ const ContactSection = () => {
 
             <div className="p-10 flex items-center gap-4 bg-white/50">
                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-               <span className="text-[10px] font-black uppercase tracking-widest text-slate-900 italic">On vous répond en moins de 2h</span>
+               <span className="text-[10px] font-black uppercase tracking-widest text-sky-400 italic">On vous répond en moins de 2h</span>
             </div>
           </div>
 
@@ -180,6 +180,38 @@ const ContactSection = () => {
           </p>
         </div>
       </div>
+      {/* --- INFOS : Simples et claires --- */}
+<div className="lg:col-span-4 border-r border-slate-900 divide-y-2 divide-slate-900 bg-slate-50/50">
+ 
+  {/* RÉSEAUX SOCIAUX - LA PARTIE QUE TU AS DEMANDÉE */}
+  <div className="p-10 bg-white">
+    <h3 className="text-xs font-black uppercase tracking-widest mb-6 text-slate-400">Suivez l'actualité</h3>
+    <div className="flex gap-4">
+      {[
+        { icon: <Facebook size={20} />, link: "https://facebook.com/laaficargo", label: "FB" },
+        { icon: <Instagram size={20} />, link: "https://instagram.com/laaficargo", label: "IG" },
+        { icon: <Linkedin size={20} />, link: "https://linkedin.com/company/laaficargo", label: "IN" }
+      ].map((social, index) => (
+        <a 
+          key={index}
+          href={social.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 border border-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all group"
+          title={social.label}
+        >
+          {social.icon}
+        </a>
+      ))}
+    </div>
+  </div>
+
+  {/* TEMPS DE RÉPONSE */}
+  <div className="p-10 flex items-center gap-4  text-white">
+     <div className="w-2 h-2 rounded-full bg-sky-500 animate-pulse" />
+     <span className="text-[10px] text-sky-400 font-black uppercase tracking-widest italic">On vous répond en moins de 2h</span>
+  </div>
+</div>
     </section>
   )
 }

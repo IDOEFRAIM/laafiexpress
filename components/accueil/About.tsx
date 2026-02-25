@@ -4,6 +4,10 @@ import { motion } from 'framer-motion'
 import { ShieldCheck, Globe, Briefcase } from 'lucide-react'
 
 const AboutSection = () => {
+  const position = [
+    { label: "Position en Chine", value: "Guangzhou, CN" },
+    { label: "Position au Burkina", value: "Ouagadougou, BF" }
+  ]
   return (
     <section id="about" className="py-40 bg-white relative overflow-hidden">
       {/* GRID DE CONSTRUCTION SUISSE (Lignes de 0.5px) */}
@@ -34,7 +38,7 @@ const AboutSection = () => {
             </h2>
             
             <p className="text-xl md:text-3xl font-light text-slate-500 max-w-2xl leading-tight">
-              LAAFI CARGO INTERNATIONAL est un pont stratégique entre la<span className="text-slate-900 font-bold uppercase">Chine</span> et la dynamique économique du <span className="text-slate-900 font-bold uppercase">Burkina Faso</span>.
+              LAAFI CARGO INTERNATIONAL est un pont stratégique entre la <span className="text-slate-900 font-bold uppercase">Chine</span> et la dynamique économique du <span className="text-slate-900 font-bold uppercase">Burkina Faso</span>.
             </p>
           </div>
 
@@ -62,7 +66,7 @@ const AboutSection = () => {
             </div>
             <h3 className="text-xs font-black uppercase tracking-[0.3em] mb-6 text-blue-600">Notre Mission</h3>
             <p className="text-sm font-bold uppercase leading-relaxed text-slate-600">
-              Nous facilitons l'importation de vos marchandises avec une précision chirurgicale, garantissant fluidité et sécurité sur tout le corridor Chine-Burkina.
+            Nous gèrons vos expéditions Chine-Burkina de A à Z. Zéro blocage, 100% sécurisé.            
             </p>
           </div>
 
@@ -95,7 +99,7 @@ const AboutSection = () => {
             <div className="space-y-6">
               <div>
                 <p className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Division Fiscale</p>
-                <p className="text-lg font-black tracking-tighter uppercase text-slate-900">DCI</p>
+                <p className="text-lg font-black tracking-tighter uppercase text-slate-900">Document de Controle a l'Importation</p>
               </div>
               <div className="pt-4 border-t border-slate-200">
                  <div className="flex items-center gap-2">
@@ -108,17 +112,18 @@ const AboutSection = () => {
 
         </div>
 
-        {/* FOOTER DE SECTION : CHIFFRES CLÉS OU MENTION LÉGALE */}
+        {/* FOOTER DE SECTION : CHIFFRES CLÉS OU MENTION LÉGALE aire une map et looper avec les 2 */}
         <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-8 border-b border-slate-100 pb-12">
           <div className="flex gap-8">
-             <div className="text-center">
-                <p className="text-[9px] font-mono text-slate-300 mb-1">Position en chine</p>
-                <p className="text-xs font-black uppercase tracking-widest">Guangzhou, CN</p>
+            {
+              position.map((pos)=>(
+                 <div className="text-center">
+                <p className="text-xs font-mono text-slate-800 font-bold mb-1">{pos.label}</p>
+                <p className="text-md font-black uppercase tracking-widest">{pos.value}</p>
              </div>
-             <div className="text-center">
-                <p className="text-[9px] font-mono text-slate-300 mb-1">Position au Burkina</p>
-                <p className="text-xs font-black uppercase tracking-widest">Ouagadougou, BF</p>
-             </div>
+              ))
+            }
+
           </div>
         </div>
       </div>
