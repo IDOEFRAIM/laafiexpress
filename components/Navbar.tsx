@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { logoutAction } from "@/actions/auth"
 import { 
   LogOut, 
 
@@ -90,11 +91,11 @@ export default function Navbar({ user }: NavbarProps) {
                   <p className="text-[10px] text-blue-600 uppercase font-black leading-none">{getRoleLabel(user.role)}</p>
                   <p className="text-xs font-bold text-slate-900">Connecté</p>
                 </div>
-                <form action="/api/auth/logout" method="POST">
-                  <Button variant="ghost" size="icon" className="rounded-full hover:bg-red-50 hover:text-red-600">
+                  <Button
+                    onClick={() => logoutAction()}
+                   variant="ghost" size="icon" className="rounded-full hover:bg-red-50 hover:text-red-600">
                     <LogOut size={20} />
                   </Button>
-                </form>
               </div>
             ) : (
               <div className="flex items-center gap-4 pl-6 border-l border-slate-200">

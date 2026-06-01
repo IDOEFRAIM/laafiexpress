@@ -8,6 +8,7 @@ const AboutSection = () => {
     { label: "Position en Chine", value: "Guangzhou, CN" },
     { label: "Position au Burkina", value: "Ouagadougou, BF" }
   ]
+  
   return (
     <section id="about" className="py-40 bg-white relative overflow-hidden">
       {/* GRID DE CONSTRUCTION SUISSE (Lignes de 0.5px) */}
@@ -34,7 +35,7 @@ const AboutSection = () => {
             
             <h2 className="text-6xl md:text-[110px] font-black leading-[0.8] tracking-tighter uppercase text-slate-900 mb-12">
               L'EXCELLENCE <br />
-              SANS FRONTIÈRE.
+              SANS FRONTIÈRE.
             </h2>
             
             <p className="text-xl md:text-3xl font-light text-slate-500 max-w-2xl leading-tight">
@@ -66,7 +67,7 @@ const AboutSection = () => {
             </div>
             <h3 className="text-xs font-black uppercase tracking-[0.3em] mb-6 text-blue-600">Notre Mission</h3>
             <p className="text-sm font-bold uppercase leading-relaxed text-slate-600">
-            Nous gèrons vos expéditions Chine-Burkina de A à Z. Zéro blocage, 100% sécurisé.            
+              Nous gérons vos expéditions Chine-Burkina de A à Z. Zéro blocage, 100% sécurisé.            
             </p>
           </div>
 
@@ -112,18 +113,15 @@ const AboutSection = () => {
 
         </div>
 
-        {/* FOOTER DE SECTION : CHIFFRES CLÉS OU MENTION LÉGALE aire une map et looper avec les 2 */}
+        {/* --- FOOTER DE SECTION --- */}
         <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-8 border-b border-slate-100 pb-12">
           <div className="flex gap-8">
-            {
-              position.map((pos)=>(
-                 <div className="text-center">
+            {position.map((pos) => (
+               <div key={pos.label} className="text-center">
                 <p className="text-xs font-mono text-slate-800 font-bold mb-1">{pos.label}</p>
                 <p className="text-md font-black uppercase tracking-widest">{pos.value}</p>
-             </div>
-              ))
-            }
-
+               </div>
+            ))}
           </div>
         </div>
       </div>
